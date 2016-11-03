@@ -1,0 +1,57 @@
+
+public class User {
+
+    //variables~!
+    private String userID, emailAddress;
+    private int numOfAccesses=0;
+    static int counter=0;
+
+    //constructor
+    public User (String id, String email, int num) {
+        userID = id;
+        emailAddress = email;
+        numOfAccesses = num;
+        counter++;
+    }
+
+    //constructor
+    public User() {
+         new User(null, null, 0);
+    }
+
+    //constructor
+    public User(int numba,  String tehEmail) {
+        new User(null, tehEmail, numba);
+    }
+// or use super?!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    //setters~!
+    public void setUserID (String id) {
+        userID = id;
+    }
+    public void setEmailAddress(String email) {
+        emailAddress = email;
+    }
+
+    //getters~!
+    public String getUserID() {
+        return userID;
+    }
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+    public int getNumOfAccesses() {
+        return numOfAccesses;
+    }
+
+    public void updatesNumberOfAccesses() {
+        numOfAccesses++;
+    }
+    public String toString() {
+        String m;
+        return m = "User{ " + " userID=" + this.getUserID() +  ", emailAddress="+ this.getEmailAddress() + ", numOfAccess=" + this.getNumOfAccesses() +"}";
+    }
+    public boolean equals(Object obj) {
+        User o = (User) obj;
+        return this.equals(obj);
+    }
+}
