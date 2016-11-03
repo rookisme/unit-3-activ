@@ -1,0 +1,20 @@
+
+public class PrivilegedUser extends User{
+    private boolean status = false;
+
+    public PrivilegedUser(String id, String emaillAddress, int numOfAccess) {
+        super(id,emaillAddress,numOfAccess);
+        status = true;
+    }
+
+    public PrivilegedUser() {
+        super();
+        status = false;
+    }
+
+    public String toString() {
+
+        return  "User{ " + "userID=" + this.getUserID() + ", emaillAddress=" + this.getEmailAddress() + ", numOfAccess=" + this.getNumOfAccesses()+"}, \n"
+                + "PrivilegedUser{ status="+ this.status + "}";
+    }
+}
