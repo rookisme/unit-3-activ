@@ -1,0 +1,26 @@
+public class TestUsers {
+public static void main (String[] args) {
+    User user1 = new User("1","roro@me.co", 0);
+    System.out.println(user1.toString());
+    System.out.println(user1.counter);
+    System.out.println(User.counter);
+    User user2 = new User();
+    user2.setEmailAddress("Voz@moz.mz");
+    user2.setUserID("22");
+    System.out.println("user: " + "email: "+ user2.getEmailAddress() + " ID: " + user2.getUserID() + " num of access: " + user2.getNumOfAccesses());
+    System.out.println(user2.counter + "\n" + User.counter);
+    System.out.println("User1: " + user1.toString());
+    System.out.println("User2: " + user2.toString());
+
+    PrivilegedUser puser1 = new PrivilegedUser("31","zaza@ra.ro",1);
+    System.out.println(puser1.toString() + "Counter of this puser1: "+ puser1.counter);
+    System.out.println("counter of the class P " +PrivilegedUser.counter);
+    PrivilegedUser puser2 = new PrivilegedUser();
+    System.out.println("puser2: " + puser2.toString() + "Counter: " + puser2.counter);
+    System.out.println("counter of the class P " + PrivilegedUser.counter);
+    System.out.println(user1.equals(user1));
+    System.out.println(user1.equals(user2));
+    System.out.println(user1 == user2);
+    System.out.println(user1.equals(puser1));
+}
+}
